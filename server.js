@@ -38,7 +38,16 @@ app.post('/api/countries', (req, res) => {
   res.send(`Added country: ${newCountry.name}`);
 });
 
-
+//GET A SINGLE COUNTRY
+app.get('/api/countries/:id', (req, res) => {
+  const { id } = req.body;
+  const country = countries.find((c) => c.id === parseInt(id, 10));
+  if (country) {
+    res.json(country);
+  } else{
+    res.status(404).json({Message: 'Country not found'});
+  }
+});
 
 app.listen(PORT, () => {
     console.log(`This PORT is Firing from http://localhost:${PORT}`)
