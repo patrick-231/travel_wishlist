@@ -7,9 +7,9 @@ const countries = [
     },
     {
         id: 2,
-        name: "United States of America",
-        alpha2Code: "US",
-        alpha3Code: "USA"
+        name: "Singapore",
+        alpha2Code: "SG",
+        alpha3Code: "SGP"
     },
     {
         id: 3,
